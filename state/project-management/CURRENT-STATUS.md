@@ -26,9 +26,20 @@ The reserved workstream was initialized. Transitioned from single-stream mode on
 
 ## Planned Next Step
 
-The next coding agent should pick up the [smartgalati-test4 work order](../../work-orders/2026-09-27-smartgalati-test4-prototype.md), register a fresh delivery workstream and implement the independent candidate.
+The next coding agent should pick up the [smartgalati-test5 work order](../../work-orders/2026-09-27-smartgalati-test5-prototype.md), register a fresh delivery workstream and implement the independent candidate.
 
-## Latest Delivered Slice (2026-09-27)
+## Latest Delivered Slice (2026-09-27, evening)
+
+- Prepared the test5 work order at the owner's request (hostname confirmed as
+  `smartgalati-test5.mycodespace.ai`), carrying forward the test4 conditions plus
+  the test4 lessons: content-fidelity audit and reusable verified content, taken
+  ports, certificate/host propagation window, CDN header ordering, trailing-slash
+  redirects, and the finishing/retire steps of the workflow.
+- Linked it from README and index; recorded test4 (`claude-rocada-site`) as
+  delivered and integrated. Synchronized this branch from `main` first.
+- Delivery: direct-main by rebase + fast-forward + normal push.
+
+## Previous Slice (2026-09-27)
 
 - Prepared the test4 work order at the owner's request, carrying forward the
   test3 conditions, readability/palette refinement, unchanged enrollment URL,
