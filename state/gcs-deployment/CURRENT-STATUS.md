@@ -4,7 +4,7 @@ Name: `gcs-deployment`
 
 Start date: `2026-09-27`
 
-State: active; deployment suite v2 prepared and validated
+State: active; waiting on live test execution
 
 Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@05687aa6136c
 
@@ -27,12 +27,11 @@ Enhance scripts/gcs deployment suite to support multi-project deployments (resou
   8. `05-configure-dns.sh`: Automates Cloud DNS `A` record creation in `central-trees-497510-h7` with IP auto-discovery and resolver verification.
   9. `check-status.sh`: Real-time diagnostic probe for DNS, Google-managed SSL status (`PROVISIONING` -> `ACTIVE`), and live HTTPS connectivity.
   10. `README.md`: Comprehensive documentation covering topology, lessons learned, and execution walkthrough.
-- All scripts verified for bash syntax (`bash -n`).
-- Diagnostic status probe verified against live deployment (`smartgalati-test.mycodespace.ai`).
+- All scripts verified for syntax (`bash -n`) and domain default `smartgalati-test2` confirmed across all files.
 
 ## Planned Next Step
 
-Present the completed deployment suite to the user and await approval or live execution command.
+Await user live execution confirmation for `smartgalati-test2`, then commit and integrate `ws-gcs-deployment/scripts-v2` into `main`.
 
 ## Open Threads
 
