@@ -17,7 +17,7 @@ Enhance scripts/gcs deployment suite to support multi-project deployments (resou
 ## Current State
 
 - Prepared full deployment suite under `scripts/gcs/` incorporating all requirements and lessons learned:
-  1. `config.env`: Centralized environment configuration with default target website `smart-galati-test2`, bucket `test2`, region `europe-north1` (Finland), resource project `mycodespace3p`, DNS project `central-trees-497510-h7` (zone `mycodespace`).
+  1. `config.env`: Centralized environment configuration with default target website `smartgalati-test2`, bucket `test2`, region `europe-north1` (Finland), resource project `mycodespace3p`, DNS project `central-trees-497510-h7` (zone `mycodespace`).
   2. `common.sh`: Common helpers ensuring `gcloud` discovery, non-interactive API enablement (`compute.googleapis.com`, `storage.googleapis.com`, `dns.googleapis.com`), and Org Policy `iam.allowedPolicyMemberDomains` handling.
   3. `01-create-bucket.sh`: Regional storage creation in Finland with uniform bucket-level access and no public-access prevention; handles global namespace collision diagnostics.
   4. `02-configure-website.sh`: Website entrypoints, public viewer binding, automated detection of Org Policy HTTP 412, override generation, and propagation retry loop.
