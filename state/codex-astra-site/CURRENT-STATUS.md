@@ -5,7 +5,9 @@ Start date: `2026-09-27`
 State: active
 Branch association: `ws-codex-astra-site/implementation`
 Target branch: `main`
-Delivery: reviewable branch; ordinary integration with deliverable.
+Delivery: pull-request to `main`; branch published. GitHub connector returned HTTP 404 when creating the draft PR, so integration remains pending repository API access or a human-created PR. No direct-main permission inferred.
+Designated integration branch: `ws-codex-astra-site/implementation`.
+Synchronization policy: merge main into published branch when needed; main and origin/main currently match; no force pushes.
 
 Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@05687aa6136c
 
@@ -29,6 +31,8 @@ Finish browser/accessibility validation, deploy final revisions, verify managed 
 ## Open Threads
 - Existing registration form URL intentionally unchanged and not a blocker.
 - Product owner's visual acceptance remains a later comparison of candidates.
+- GitHub connector cannot create a PR for this repository (HTTP 404); SSH branch push succeeded.
+- External Lichess iframe has upstream contrast findings once loaded; own-page accessibility checks pass. See delivery evidence.
 - Workflow registration wording conflicts on committing registration to main vs first workstream branch; follow the explicit Beginning A Workstream step 6: register on first workstream branch and integrate with deliverable.
 
 ## Document Index
@@ -42,3 +46,10 @@ Finish browser/accessibility validation, deploy final revisions, verify managed 
 - Enrollment link unchanged by explicit user direction. Removed unrelated fake album/study links from this candidate only. Preserved historical source dates.
 - CMS remains optional per work-order overview: IDE/GitHub Markdown editing delivered. No new cloud credentials or CI identity created; workflow supports existing Workload Identity variables if configured.
 - Mainline remains unchanged; source work is on this workstream branch.
+
+## Validation Checkpoint
+- Production browser suite passes 19 content routes and internal targets, menu/filter/contact/gallery keyboard behaviors, and responsive widths 320–1440px. Zero site-owned WCAG A/AA findings on eight representative pages.
+- Working Lichess board verified separately, including blocked-service fallback.
+- Latest deployment uses the original GCS scripts without shared changes. DNS and host routing verified; test2 continues HTTPS 200. Waiting for new certificate activation before public-domain smoke checks.
+- Source branch pushed to origin. Latest source refinements and evidence pending final checkpoint commit.
+- Permanent evidence: `engineering-docs/implementation-notes/website/2026-09-27-codex-astra-site.md` (open for validation/deployment details).
