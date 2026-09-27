@@ -2,7 +2,7 @@
 
 Name: `codex-astra-site`
 Start date: `2026-09-27`
-State: paused; preview delivered, awaiting design review and integration
+State: active; owner-requested readability and palette refinements
 Branch association: `ws-codex-astra-site/implementation`
 Target branch: `main`
 Designated integration branch: `ws-codex-astra-site/implementation`
@@ -43,7 +43,7 @@ Independent website in `codex-astra-site/` under R-SITE-001 through R-SITE-007, 
 
 ## Planned Next Step
 
-Review the live design with the owner; create/review the pull request from `ws-codex-astra-site/implementation` to `main` when repository API access is available. Integrate only through the normal authorized review path; retain this open workstream until then.
+Increase small-text readability with shared type tokens; add original plus five open-source light palettes with a persistent accessible dropdown; validate all palettes and redeploy test3. Prior design review/integration remains pending.
 
 ## Document Index
 
@@ -51,3 +51,11 @@ Review the live design with the owner; create/review the pull request from `ws-c
 - `intake-dispositions.md`: consult for coordination decisions; none received.
 - [Delivery evidence](../../implementation-notes/website/2026-09-27-codex-astra-site.md): open for validation, deployment resources, known limits, and external state.
 - [Site guide](../../../codex-astra-site/README.md): open for development and deployment commands.
+
+## Current Slice
+
+Owner requested more readable desktop top-band text and similar small text, preserving the airy design, plus 5–6 selectable palettes. Original palette remains default; add five light adaptations. No workflow changes or main synchronization needed (0 behind); no pending mail or owned bugs. Done means build and palette/persistence/contrast/responsive browser checks pass and test3 serves the update.
+
+## Refinement Checkpoint
+
+Readability tokens and six palette choices implemented. Palette audit and 19-route regression pass locally. Attribution and authoring/development notes updated; no new runtime dependency. Next: deploy with existing GCS wrapper, invalidate test3 CDN cache only, then run the palette suite against the live site.
