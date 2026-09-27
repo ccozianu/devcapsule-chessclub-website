@@ -2,7 +2,7 @@
 
 Name: `codex-astra-site`
 Start date: `2026-09-27`
-State: active; owner-requested readability and palette refinements
+State: paused; readability and palette refinements delivered, awaiting owner review
 Branch association: `ws-codex-astra-site/implementation`
 Target branch: `main`
 Designated integration branch: `ws-codex-astra-site/implementation`
@@ -43,7 +43,7 @@ Independent website in `codex-astra-site/` under R-SITE-001 through R-SITE-007, 
 
 ## Planned Next Step
 
-Increase small-text readability with shared type tokens; add original plus five open-source light palettes with a persistent accessible dropdown; validate all palettes and redeploy test3. Prior design review/integration remains pending.
+Owner reviews the improved readable text and six palettes at test3. Source remains on `ws-codex-astra-site/implementation`; normal PR review/integration remains pending repository API access.
 
 ## Document Index
 
@@ -52,10 +52,11 @@ Increase small-text readability with shared type tokens; add original plus five 
 - [Delivery evidence](../../implementation-notes/website/2026-09-27-codex-astra-site.md): open for validation, deployment resources, known limits, and external state.
 - [Site guide](../../../codex-astra-site/README.md): open for development and deployment commands.
 
-## Current Slice
+## Latest Delivery: Readability and Palettes
 
-Owner requested more readable desktop top-band text and similar small text, preserving the airy design, plus 5–6 selectable palettes. Original palette remains default; add five light adaptations. No workflow changes or main synchronization needed (0 behind); no pending mail or owned bugs. Done means build and palette/persistence/contrast/responsive browser checks pass and test3 serves the update.
-
-## Refinement Checkpoint
-
-Readability tokens and six palette choices implemented. Palette audit and 19-route regression pass locally. Attribution and authoring/development notes updated; no new runtime dependency. Next: deploy with existing GCS wrapper, invalidate test3 CDN cache only, then run the palette suite against the live site.
+- Desktop top-strip text is 14px semibold; shared rem-based tokens improve captions, dates, footer and utility text without changing major page spacing/headlines. All component colors use semantic palette tokens.
+- Original Astra default plus Solarized Light, Nord Snow, Catppuccin Latte, Gruvbox Light and Rosé Pine Dawn. Native dropdown in desktop top strip/mobile menu, early preference restoration, persistence, cross-tab synchronization and storage-denied fallback.
+- Build: zero errors/warnings/hints; original 19-route browser suite passes. Public HTTPS palette suite passes all six palettes across three representative routes each, five viewport sizes, keyboard/mobile selection and persistence/fallback checks. Zero WCAG A/AA findings in these palette checks.
+- Deployed through unchanged shared GCS scripts; invalidated only test3 hostname on shared CDN. Public license/attribution file verified. Original enrollment URL and test2 site preserved.
+- Upstream palette sources and license notices documented in the site README and `public/licenses/themes.txt`. Detailed evidence appended to the permanent delivery note.
+- No pending intake; all source and documentation changes saved on the workstream branch.
