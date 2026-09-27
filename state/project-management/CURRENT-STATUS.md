@@ -22,6 +22,7 @@ The reserved workstream was initialized. Transitioned from single-stream mode on
 - 6-palette theme switcher (Classic Dark, Solarized Light, Nordic Clean, Tournament Green, Midnight Blitz, Gruvbox Warm) implemented and contrast-hardened.
 - Content collections structured and aligned with official `smartgalati.ro` instructors (Lucian Gilea, Cristian Dăianu, Robert Pîșu, Flavius Mihailiuc, Robert Ionică, Dănuț Radu).
 - Google Cloud Storage deployment suite (`scripts/gcs/`) executed; site is live and verified on HTTPS at `https://smartgalati-test.mycodespace.ai` via Cloud CDN and Google-managed SSL.
+- Delivery workstream `2026-09-27-gcs-deployment` completed and integrated; enhanced GCS deployment suite v2 for multi-project deployments, regional Finland storage (`europe-north1`), existing/new load balancers, and Cloud DNS automation; verified live on `https://smartgalati-test2.mycodespace.ai`.
 
 ## Planned Next Step
 
