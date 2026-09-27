@@ -2,14 +2,14 @@
 
 Name: `codex-astra-site`
 Start date: `2026-09-27`
-State: paused; readability and palette refinements delivered, awaiting owner review
+State: integrating; owner authorized direct-main delivery
 Branch association: `ws-codex-astra-site/implementation`
 Target branch: `main`
 Designated integration branch: `ws-codex-astra-site/implementation`
-Delivery method: pull-request (repository default); source branch pushed to origin.
-Synchronization policy: merge main into published branch when needed; no force pushes. Main matched origin/main at final fetch.
+Delivery method: direct-main, explicitly authorized by owner on 2026-09-27 and recorded in WORKFLOW-LOCAL.md. No human-only publication or merge step remains.
+Synchronization policy: direct-main synchronization and fast-forward procedure. Main matches origin/main; workstream already contains it, so no history rewrite is needed. No force pushes.
 
-Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@05687aa6136c
+Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@f38ceada0768
 
 ## Goal
 
@@ -43,7 +43,7 @@ Independent website in `codex-astra-site/` under R-SITE-001 through R-SITE-007, 
 
 ## Planned Next Step
 
-Owner reviews the improved readable text and six palettes at test3. Source remains on `ws-codex-astra-site/implementation`; normal PR review/integration remains pending repository API access.
+Archive the completed workstream, validate the final tree, fast-forward main and push normally; verify remote integration and retire live coordination state.
 
 ## Document Index
 
@@ -60,3 +60,7 @@ Owner reviews the improved readable text and six palettes at test3. Source remai
 - Deployed through unchanged shared GCS scripts; invalidated only test3 hostname on shared CDN. Public license/attribution file verified. Original enrollment URL and test2 site preserved.
 - Upstream palette sources and license notices documented in the site README and `public/licenses/themes.txt`. Detailed evidence appended to the permanent delivery note.
 - No pending intake; all source and documentation changes saved on the workstream branch.
+
+## Integration Authorization
+
+Owner explicitly permitted skipping PRs and directly merging/pushing main during the prototype phase. This supersedes the earlier PR-access blocker. Clean main/origin/main match; no pending mail/intake or workstream-owned open bugs.
