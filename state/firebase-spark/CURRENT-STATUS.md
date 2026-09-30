@@ -24,7 +24,7 @@ Done means project setup, fail-closed billing guard, static-only deployment, sta
 
 ## Next Step
 
-Implement scripts and user guide; verify CLI command behavior, billing guard, local build and Firebase emulator serving.
+Integrate verified scripts and guide by direct-main, archive this workstream, then push and verify origin/main.
 
 ## Document Index
 
@@ -34,3 +34,23 @@ Implement scripts and user guide; verify CLI command behavior, billing guard, lo
 ## Open Threads
 
 Project ID and operator login are supplied at execution time. No live Firebase deployment is part of script generation.
+
+## Validated Implementation (2026-09-30)
+
+- Scripts: create a new unbilled project, verify billing before builds/mutations,
+  prepare isolated static Hosting configuration, provision missing Hosting site,
+  deploy, and check billing plus HTTP behavior. CLI pinned to 15.32.0.
+- Canonical URLs honor Astro.site so --site overrides the test4 default correctly.
+- Local checks: 14 guard/artifact/command tests; all 6 Rocada tests; Astro check
+  reports zero errors/warnings/hints; production build produces 285 pages and
+  565 static files. Bash syntax and git diff --check pass.
+- Real Firebase Hosting emulator passes home/contact/gallery, custom 404,
+  slash redirect, archive/article, canonical hostname and cache-header checks.
+- No live cloud API provisioning/deployment or DNS mutation performed. Command
+  tests mock gcloud/Firebase; operator permissions are unverified.
+- Guide: docs/firebase-spark-deployment.md. R-SITE-007 amendment records owner
+  authorization. Project ID and login are operator-supplied at execution time.
+- Billing boundary depends on the project remaining unlinked; guards cannot
+  prevent a concurrent/later administrator upgrade. Existing GCS bills persist.
+- Fresh origin fetch shows no changed main/workflow definition; no rebase content
+  changes needed. Intake and mailbox empty. No human-only publication step.
