@@ -24,7 +24,7 @@ Research the real cost of the scripts/gcs deployment and compare static hosting 
 
 ## Next Task
 
-Inspect deployment evidence, verify provider pricing against primary sources and write engineering-docs/design-notes/hosting/2026-09-30-static-hosting-costs-and-alternatives.md.
+Integrate the completed note by direct-main, then retire this research workstream. Any migration or billing reconciliation is a separately selected follow-up.
 
 ## Document Index
 
@@ -34,3 +34,12 @@ Inspect deployment evidence, verify provider pricing against primary sources and
 ## Open Threads
 
 No hosting choice adopted and no cloud resources changed. Actual invoice reconciliation requires billing data.
+
+## Research Checkpoint
+
+- Delivered a sourced comparison of GCS, GitHub Pages, Cloudflare, Firebase, AWS, Azure, Netlify and Vercel, with R2/server alternatives, portfolio allocation and migration acceptance checks.
+- Calculations: illustrative 10-GiB/100k-request GCS month is $19.395 standalone, $7.095 allocated among three equal sites, $0.945 incremental. No invoice claimed.
+- Validated: source rates/limits, AWS S3 Ireland and Azure West Europe public price feeds, measured existing dist artifacts, formula arithmetic and local note links. No application tests required for documentation only.
+- Not validated: authenticated resources, usage, invoices, Finland-specific storage quote, or live provider performance. Pricing guide discrepancies explicitly recorded.
+- External state: only workflow coordination published; no hosting resources or DNS changed.
+- Uncommitted deliverable: engineering note, index and this status. Original checkout's test5 files untouched.
