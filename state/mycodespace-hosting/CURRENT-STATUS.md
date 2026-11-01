@@ -53,3 +53,12 @@ mycodespace.ai. Both hosts share the dedicated matcher/backend. Original
 chessclub-site default backend and certificate are unchanged. New certificate
 is still PROVISIONING; public edge still presents the old certificate/route.
 Continue polling; do not report HTTPS complete until ordinary curl validates it.
+
+## Verification (09:18 UTC)
+
+Routing now serves the correct page for the new hosts. Anonymous bucket HTML
+matches dist/index.html byte-for-byte (SHA256
+bb55730fc5d60f2b9a9770396f9ac4b18a9c02381992bc4251ef7d463892e283).
+HTML cache-control is public, max-age=300, must-revalidate. Repeated provision
+passed without duplicate resources or replacing existing certificates/routes.
+TLS is still provisioning; continue normal HTTPS checks before completion.
