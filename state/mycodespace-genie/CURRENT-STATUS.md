@@ -2,7 +2,7 @@
 
 Name: `mycodespace-genie`
 Start date: 2026-11-01
-State: paused; fresh preview ready for owner review
+State: paused; local preview accepted, awaiting deployment authorization
 Branch association: `ws-mycodespace-genie/fresh-start`
 Target: main; direct-main default; local preview only, no deployment authorized.
 
@@ -12,8 +12,9 @@ Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@f38ceada0768
 
 Implemented the [work order](../../work-orders/2026-11-01-mycodespace-genie-overlay.md) from zero at owner request. Previous implementation is preserved on ws-mycodespace-genie/overlay. Fresh branch starts from deployed main 19ced60, carrying only registration/work order from 0914d4b; no old overlay code reused.
 
-Original inline SVG character, outlined bubbles and smoke are in src/components/GenieOverlay.astro. Native CSS keyframes provide rise/grow, eyebrow lift, wink, joke, lamp rub, smoke burst and announcement. Stroke halos and a feathered spotlight improve legibility without opaque panels. During playback main content blurs 5px and fades to 38% opacity with a 250ms transition; a translucent paper-coloured radial field follows the SVG. All exit paths restore main appearance. Existing photo, layout and copy retained.
+Original inline SVG character, outlined bubbles and smoke are in src/components/GenieOverlay.astro. Native CSS keyframes provide rise/grow, eyebrow lift, wink, joke, lamp rub, smoke burst and announcement. Existing photo, layout and copy retained.
 
+Owner accepted the final localized readability effect (“This is perfect !!”). Feathered SVG masks restrict 4px backdrop blur and 56% paper tint to the character silhouette and visible speech bubbles. Rest of page remains sharp, with no main opacity/filter changes. Removed opacity animation from flight ancestor so CSS backdrop filters can sample the underlying page; movement/scaling remain animated. This supersedes the previous page-wide focus treatment.
 ## Policies and Timing
 
 - Eligibility: ≥951px, primary fine pointer plus hover, no reduced-motion preference. Suppress entirely otherwise, including touch-only tablets. Resizing or preference changes remove playback.
@@ -23,23 +24,19 @@ Original inline SVG character, outlined bubbles and smoke are in src/components/
 
 ## Evidence
 
-- 24 existing browser checks still pass after the legibility change, plus five focused checks: main blur active, bubble transparent, underlying link receives hit-testing, Escape restores appearance, reduced motion restores appearance. Static build and whitespace check pass.
-- Legibility refinement: owner asked for a creative separation from underlying text. Added shared moving/feathered spotlight and temporary main-content softening; inspected joke/final screenshots. No opaque fills added to SVG artwork or bubbles. Page remains clickable and normal appearance returns after dismissal/completion/resize.
-
-- Static build and git diff --check pass. No dependencies added.
-- 24 Chromium/Playwright checks pass: exact copy; playback; click-through; Escape/pointer/keyboard dismissal; focus return; session suppression; replay; resize; phone/narrow desktop/touch tablet/reduced motion suppression; no overflow; bubble bounds at 951/1920/2560; completion; no browser errors.
-- Screenshots of entrance, eyebrow, wink, joke, rub, smoke and final reveal captured outside repo; joke, smoke and announcement visually reviewed at 1440px.
-- Main matches origin/main; workflow files unchanged, no synchronization needed. No open owned bugs or intake/mail. Previous claim was from the parked attempt; owner explicitly selected this fresh run.
-- No deployment, cloud changes, main integration, or changes to previous implementation branch.
+- Static build and diff whitespace checks pass. No dependencies added.
+- 24 Chromium/Playwright checks pass after localization: exact copy; playback; click-through; Escape/pointer/keyboard dismissal; focus return; session suppression; replay; resize; phone/narrow desktop/touch tablet/reduced motion suppression; no overflow; bubble bounds at 951/1920/2560; completion; no browser errors.
+- Final joke screenshot visually reviewed: blur follows silhouette/bubble, adjacent text and photo remain sharp. Owner then explicitly accepted visual result.
+- Main and production unchanged; no deployment, cloud changes, or edits to previous attempt branch. Mail/intake empty; no owned open bugs.
 
 ## Next Step
 
-Owner reviews http://localhost:4329/?genie=1 on desktop. Refine artwork/timing from feedback; do not deploy without separate owner authorization.
+Local version accepted. Await owner instruction for next work or explicit production deployment authorization. Preview: http://localhost:4329/?genie=1.
 
 ## Open Threads
 
-- Awaiting human: review of new focus/spotlight treatment. Original transparent overlay was muddled by page text; background softening now separates artwork from content.
-- Reduced motion suppresses the cameo instead of showing a still; avoids introducing a persistent overlay needing its own dismissal story.
+- Awaiting human: whether/when to deploy. Visual acceptance alone does not authorize deployment.
+- Reduced motion suppresses the cameo instead of showing a persistent still.
 
 ## External State
 
