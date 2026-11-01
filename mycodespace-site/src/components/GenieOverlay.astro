@@ -1,0 +1,340 @@
+---
+// Desktop-only line-art genie cameo. See mycodespace-site/README.md,
+// "Genie overlay", for eligibility, timing and replay rules.
+---
+
+<div class="genie" id="genie" hidden>
+  <button class="genie-dismiss" type="button" data-genie-dismiss>
+    Skip the genie <span aria-hidden="true">✕</span>
+  </button>
+  <div class="genie-stage" aria-hidden="true">
+    <svg viewBox="0 0 800 600" overflow="visible" focusable="false">
+      <g class="genie-figure">
+        <!-- tail of smoke curling out of the lamp spout -->
+        <path class="genie-tail" d="M 418 332 C 404 372 332 368 320 402 C 308 436 352 442 302 458 C 262 470 246 466 236 480" />
+        <path d="M 238 468 c -16 -12 -8 -30 4 -34 M 252 454 c -10 -10 -2 -20 8 -22" />
+        <!-- torso and arms -->
+        <path d="M 365 242 Q 430 214 495 242 C 512 285 488 324 430 332 C 372 324 348 285 365 242 Z" />
+        <path d="M 396 316 Q 430 336 466 316" />
+        <path d="M 414 203 L 412 222 M 446 203 L 448 222" />
+        <path d="M 372 250 C 338 268 334 300 368 316 C 378 320 386 312 380 304" />
+        <g class="genie-arm">
+          <path d="M 492 250 C 530 268 548 310 535 352 C 528 408 486 456 452 494" />
+          <path d="M 452 494 C 440 498 428 508 432 518 C 440 524 456 518 462 506 C 466 498 460 492 452 494 Z" />
+          <path d="M 440 512 l 10 -6 M 446 518 l 10 -7" />
+        </g>
+        <!-- head -->
+        <ellipse cx="430" cy="150" rx="50" ry="56" />
+        <path d="M 408 100 Q 430 88 452 100 M 430 94 C 428 70 462 66 468 44 M 430 94 C 445 76 476 80 482 62" />
+        <path d="M 382 142 Q 368 152 382 166 M 478 142 Q 492 152 478 166" />
+        <circle cx="486" cy="172" r="6" />
+        <path class="genie-brow genie-brow-l" d="M 393 126 Q 410 110 427 122" />
+        <path class="genie-brow genie-brow-r" d="M 433 122 Q 450 110 467 126" />
+        <g class="genie-eye">
+          <circle cx="410" cy="144" r="9" />
+          <circle class="genie-pupil" cx="413" cy="145" r="3.5" />
+        </g>
+        <g class="genie-eye genie-eye-r">
+          <circle cx="450" cy="144" r="9" />
+          <circle class="genie-pupil" cx="453" cy="145" r="3.5" />
+        </g>
+        <path d="M 431 150 L 426 168 L 436 170" />
+        <path d="M 398 180 Q 430 212 462 180 M 466 176 l 6 -6" />
+        <path d="M 420 206 L 430 230 L 440 206" />
+      </g>
+      <!-- the lamp -->
+      <g class="genie-lamp">
+        <path d="M 480 520 Q 500 548 460 560 L 340 560 Q 300 548 320 520 Z" />
+        <path d="M 462 520 Q 400 496 338 520 M 400 505 L 400 509" />
+        <circle cx="400" cy="500" r="5" />
+        <path d="M 320 528 C 280 525 255 505 240 480 L 230 484 C 244 512 270 538 314 545" />
+        <path d="M 478 528 C 510 522 520 548 482 556" />
+        <path d="M 360 560 Q 400 572 440 560" />
+      </g>
+      <g class="genie-sparkles">
+        <path class="genie-sparkle" d="M 292 498 h 16 M 300 490 v 16 M 295 493 l 10 10 M 305 493 l -10 10" />
+        <path class="genie-sparkle" d="M 496 582 h 16 M 504 574 v 16 M 499 577 l 10 10 M 509 577 l -10 10" />
+        <path class="genie-sparkle" d="M 548 526 h 14 M 555 519 v 14 M 550 521 l 10 10 M 560 521 l -10 10" />
+      </g>
+      <!-- first joke -->
+      <g class="genie-bubble">
+        <path d="M 56 30 H 354 Q 370 30 370 46 V 76 Q 370 92 354 92 H 290 L 392 168 L 240 92 H 56 Q 40 92 40 76 V 46 Q 40 30 56 30 Z" />
+        <text x="205" y="69" text-anchor="middle">Because myspace.com flopped</text>
+      </g>
+      <!-- poof and announcement -->
+      <g class="genie-poof">
+        <path d="M 685 300 A 29 29 0 0 1 663 348 A 41 41 0 0 1 602 388 A 54 54 0 0 1 509 415 A 61 61 0 0 1 400 425 A 61 61 0 0 1 291 415 A 54 54 0 0 1 198 388 A 41 41 0 0 1 137 348 A 29 29 0 0 1 115 300 A 29 29 0 0 1 137 252 A 41 41 0 0 1 198 212 A 54 54 0 0 1 291 185 A 61 61 0 0 1 400 175 A 61 61 0 0 1 509 185 A 54 54 0 0 1 602 212 A 41 41 0 0 1 663 252 A 29 29 0 0 1 685 300 Z" />
+      <line class="genie-burst" x1="696" y1="347" x2="726" y2="357" />
+      <line class="genie-burst" x1="583" y1="422" x2="602" y2="448" />
+      <line class="genie-burst" x1="400" y1="451" x2="400" y2="483" />
+      <line class="genie-burst" x1="217" y1="422" x2="198" y2="448" />
+      <line class="genie-burst" x1="104" y1="347" x2="74" y2="357" />
+      <line class="genie-burst" x1="104" y1="253" x2="74" y2="243" />
+      <line class="genie-burst" x1="217" y1="178" x2="198" y2="152" />
+      <line class="genie-burst" x1="400" y1="149" x2="400" y2="117" />
+      <line class="genie-burst" x1="583" y1="178" x2="602" y2="152" />
+      <line class="genie-burst" x1="696" y1="253" x2="726" y2="243" />
+      </g>
+      <g class="genie-announce">
+        <text class="genie-announce-text" x="400" y="286" text-anchor="middle">!!! We now have</text>
+        <text class="genie-announce-text" x="400" y="340" text-anchor="middle"><tspan class="genie-brand">MyCodeSpace.AI</tspan> !!!</text>
+      </g>
+    </svg>
+  </div>
+</div>
+
+<style is:global>
+  .genie {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .genie-dismiss {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    pointer-events: auto;
+    font: inherit;
+    font-size: 13px;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 3px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  .genie-dismiss:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+  }
+  .genie-dismiss:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+  }
+  .genie-dismiss span {
+    margin-left: 8px;
+  }
+  .genie-stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(760px, 58vw, 118vh);
+    translate: -50% -50%;
+  }
+  .genie-stage svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .genie svg * {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+  .genie .genie-brow {
+    stroke-width: 4;
+  }
+  .genie .genie-pupil {
+    fill: var(--ink);
+  }
+  .genie text,
+  .genie text * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    fill: var(--ink);
+    stroke: var(--paper);
+    stroke-width: 6;
+    paint-order: stroke;
+    vector-effect: none;
+  }
+  .genie .genie-announce-text,
+  .genie .genie-announce-text * {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  .genie .genie-brand {
+    fill: var(--blue);
+  }
+  .genie .genie-arm,
+  .genie .genie-brow,
+  .genie .genie-eye,
+  .genie .genie-sparkle,
+  .genie .genie-figure,
+  .genie .genie-bubble,
+  .genie .genie-poof,
+  .genie .genie-burst,
+  .genie .genie-announce {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .genie .genie-arm {
+    transform-box: view-box;
+    transform-origin: 492px 250px;
+  }
+  .genie .genie-bubble,
+  .genie .genie-poof,
+  .genie .genie-announce,
+  .genie .genie-sparkle,
+  .genie .genie-burst {
+    opacity: 0;
+  }
+
+  /* Beat timeline, seconds from playback start:
+     0.0 grow from bottom-left → 1.4 eyebrows → 2.1 wink → 2.6 first joke
+     → 4.8 rub the lamp → 6.2 poof → 6.6 announcement → 9.4 fade out. */
+  .genie.is-playing .genie-stage {
+    animation: genie-enter 1.4s cubic-bezier(0.2, 0.8, 0.3, 1) 0s both;
+  }
+  .genie.is-playing .genie-brow-l {
+    animation: genie-brow 0.8s ease-in-out 1.4s both;
+  }
+  .genie.is-playing .genie-brow-r {
+    animation: genie-brow-drop 0.6s ease-in-out 2.1s both;
+  }
+  .genie.is-playing .genie-eye-r {
+    animation: genie-wink 0.6s ease-in-out 2.1s both;
+  }
+  .genie.is-playing .genie-bubble {
+    animation:
+      genie-pop 0.35s cubic-bezier(0.3, 1.4, 0.5, 1) 2.6s both,
+      genie-hide 0.3s ease-in 4.8s forwards;
+  }
+  .genie.is-playing .genie-arm {
+    animation: genie-rub 1.4s ease-in-out 4.8s both;
+  }
+  .genie.is-playing .genie-sparkle {
+    animation: genie-twinkle 0.7s ease-in-out 5s 2 both;
+  }
+  .genie.is-playing .genie-sparkle:nth-child(2) {
+    animation-delay: 5.2s;
+  }
+  .genie.is-playing .genie-sparkle:nth-child(3) {
+    animation-delay: 5.4s;
+  }
+  .genie.is-playing .genie-figure {
+    animation: genie-vanish 0.3s ease-in 6.25s forwards;
+  }
+  .genie.is-playing .genie-poof {
+    animation: genie-poof 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) 6.2s both;
+  }
+  .genie.is-playing .genie-burst {
+    animation: genie-burst 0.9s ease-out 6.3s both;
+  }
+  .genie.is-playing .genie-announce {
+    animation: genie-pop 0.4s cubic-bezier(0.3, 1.4, 0.5, 1) 6.6s both;
+  }
+  .genie.is-playing {
+    animation: genie-fade 0.8s ease-in 9.4s forwards;
+  }
+
+  @keyframes genie-enter {
+    from {
+      transform: translate(calc(-50vw + 110px), calc(50vh - 90px)) scale(0.22);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes genie-brow {
+    0%, 50%, 100% { transform: none; }
+    25%, 75% { transform: translateY(-14px) rotate(-12deg); }
+  }
+  @keyframes genie-brow-drop {
+    0%, 100% { transform: none; }
+    30%, 70% { transform: translateY(8px) rotate(6deg); }
+  }
+  @keyframes genie-wink {
+    0%, 100% { transform: scaleY(1); }
+    30%, 70% { transform: scaleY(0.08); }
+  }
+  @keyframes genie-pop {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes genie-hide {
+    to { opacity: 0; transform: scale(0.8); }
+  }
+  @keyframes genie-rub {
+    0%, 100% { transform: rotate(0deg); }
+    12.5%, 62.5% { transform: rotate(5deg); }
+    37.5%, 87.5% { transform: rotate(-5deg); }
+  }
+  @keyframes genie-twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.4) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1) rotate(45deg); }
+  }
+  @keyframes genie-vanish {
+    to { opacity: 0; transform: scale(0.85); }
+  }
+  @keyframes genie-poof {
+    from { opacity: 0; transform: scale(0.1); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  @keyframes genie-burst {
+    0% { opacity: 0; transform: scale(0.6); }
+    30% { opacity: 1; }
+    100% { opacity: 0; transform: scale(1.3); }
+  }
+  @keyframes genie-fade {
+    to { opacity: 0; }
+  }
+</style>
+
+<script>
+  const overlay = document.getElementById("genie");
+  const desktop = matchMedia(
+    "(min-width: 951px) and (hover: hover) and (pointer: fine)",
+  );
+  const motionOk = matchMedia("(prefers-reduced-motion: no-preference)");
+  const KEY = "mycodespace-genie-played";
+  const replay = new URLSearchParams(location.search).get("genie") === "1";
+
+  function played() {
+    try {
+      return sessionStorage.getItem(KEY) === "1";
+    } catch {
+      return false;
+    }
+  }
+  function remember() {
+    try {
+      sessionStorage.setItem(KEY, "1");
+    } catch {
+      /* storage unavailable: the cameo may replay on reload */
+    }
+  }
+  function dismiss() {
+    if (!overlay) return;
+    overlay.remove();
+    document.removeEventListener("keydown", onKey);
+    desktop.removeEventListener("change", onMedia);
+  }
+  function onKey(event: KeyboardEvent) {
+    if (event.key === "Escape") dismiss();
+  }
+  function onMedia(event: MediaQueryListEvent) {
+    if (!event.matches) dismiss();
+  }
+
+  if (overlay && desktop.matches && motionOk.matches && (replay || !played())) {
+    remember();
+    overlay.hidden = false;
+    overlay.classList.add("is-playing");
+    overlay.querySelector("[data-genie-dismiss]")?.addEventListener("click", dismiss);
+    overlay.addEventListener("animationend", (event) => {
+      if (event.target === overlay && event.animationName === "genie-fade") dismiss();
+    });
+    document.addEventListener("keydown", onKey);
+    desktop.addEventListener("change", onMedia);
+    setTimeout(dismiss, 11000);
+  } else {
+    overlay?.remove();
+  }
+</script>

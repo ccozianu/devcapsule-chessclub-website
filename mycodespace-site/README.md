@@ -22,12 +22,40 @@ npm run dev
 
 Open http://localhost:4329. `npm run build` produces static files in `dist/`;
 `npm run preview` serves the build on the same port. Stop dev before preview.
-There is no backend, browser JavaScript, analytics, remote font, or account setup.
+There is no backend, analytics, remote font, or account setup. The only browser
+JavaScript is the few lines that sequence the genie overlay described below.
 
 Edit `src/pages/index.astro` for copy and `src/styles/global.css` for appearance.
 The short page deliberately keeps content in one file rather than adding a CMS.
 `src/pages/404.astro` is the custom error page. Public assets include the favicon,
 robots.txt and single-page sitemap.
+
+## Genie overlay
+
+`src/components/GenieOverlay.astro` is a desktop-only line-art cameo: a genie
+grows from the bottom-left corner, raises an eyebrow and winks, says “Because
+myspace.com flopped”, rubs his lamp, and vanishes in a “poof” cloud that
+reveals “!!! We now have MyCodeSpace.AI !!!”. Everything is inline SVG with
+transparent interiors, driven by CSS keyframes; the script only decides
+eligibility, dismissal and removal. The page stays usable underneath: the
+overlay ignores pointer events except on its “Skip the genie” button.
+
+Rules, chosen on 2026-11-01:
+
+- Eligible only when the viewport is at least 951px wide (the existing desktop
+  layout breakpoint) and the primary input is a fine, hovering pointer, so
+  phones and touch-only tablets never start it. Shrinking the window below the
+  breakpoint mid-play removes it.
+- Suppressed entirely under `prefers-reduced-motion: reduce`; there is no
+  still version.
+- Plays once per browser tab session (`sessionStorage`); a visit with
+  `/?genie=1` replays it for review.
+- Dismiss with the button (pointer or Tab + Enter) or the Escape key. The
+  cameo lasts about ten seconds, then fades and removes itself.
+- Without JavaScript the overlay stays hidden.
+
+Adjust timing in the component's keyframe delays; the beat table is in a
+comment above them. Keep the two lines of copy exactly as written above.
 
 ## GCS deployment
 

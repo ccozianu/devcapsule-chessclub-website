@@ -64,3 +64,13 @@ narrow headshot framing; preserve the source unchanged.
 Publication approval (2026-11-01): owner accepted the current contact/layout
 refinements and explicitly requested production deployment before any genie
 overlay. This supersedes the local-only restriction for these changes.
+
+Genie overlay (owner work order, 2026-11-01): add a desktop-only line-art SVG
+cameo over the landing page with six beats in order: grow from the
+bottom-left, eyebrow gesture and wink, outlined bubble “Because myspace.com
+flopped”, lamp rubbing, comic poof, announcement “!!! We now have
+MyCodeSpace.AI !!!”. Transparent interiors, clicks pass through, accessible
+dismissal, reduced-motion and once-per-visit policies documented. Phones and
+touch-only screens never start it. Local preview for owner review first; no
+production deployment without separate authorization. See the
+[work order](../work-orders/2026-11-01-mycodespace-genie-overlay.md).

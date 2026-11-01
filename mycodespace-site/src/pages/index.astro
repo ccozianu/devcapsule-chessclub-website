@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import costinChess from "../assets/costin-cozianu-chess.jpg";
+import GenieOverlay from "../components/GenieOverlay.astro";
 const description =
   "A personal home for your code, projects, tools, and the knowledge behind them. For students, hobbyists, and professionals. DevCapsule is our first step.";
 ---
@@ -28,6 +29,7 @@ const description =
     <a class="skip-link" href="#main">
       Skip to content
     </a>
+    <GenieOverlay />
     <div class="page">
       <header class="site-header">
         <a class="wordmark" href="/" aria-label="MyCodeSpace home">
