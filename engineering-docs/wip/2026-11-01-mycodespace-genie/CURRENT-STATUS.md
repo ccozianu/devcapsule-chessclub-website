@@ -50,7 +50,8 @@ awaiting owner review.
 
 ## Next Step
 
-Owner reviews http://localhost:4329/ (append `?genie=1` to replay). On
+Owner starts a local preview and reviews http://localhost:4329/ (append
+`?genie=1` to replay). On
 acceptance: integrate to `main` by direct-main; production deployment remains
 a separate owner authorization.
 
@@ -68,8 +69,9 @@ a separate owner authorization.
 
 ## External State
 
-`npm run preview` is serving the current `dist/` on port 4329 in the
-background from `mycodespace-site/`; stop it before `npm run dev`.
+No preview server is running; port 4329 is free. Rebuild and run
+`npm run preview` (or `npm run dev`) from `mycodespace-site/` to review again.
+Branch `ws-mycodespace-genie/overlay` is parked on `origin`.
 
 ## Document Index
 
