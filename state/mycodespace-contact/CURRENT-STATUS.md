@@ -14,6 +14,9 @@ Refine the contact invitation without production deployment. Owner requested a t
 
 ## Current State and Evidence
 
+- Latest owner portrait refinement: owner identified himself as player on left. Astro now generates left-aligned 2:3 crops at 160/320px; CSS oval frames a 160×240px portrait. No blur or generative changes. Partner on right excluded from generated public files; full original stays in source assets only. Built dist contains only cropped WebPs (7/19kB), not original or previous full-scene versions.
+- Build, whitespace and Chromium responsive checks passed at 320/390/1440px. Desktop screenshot confirms sharp owner portrait with partner absent. No deployment.
+
 - Latest alignment refinement: moved card before headline in document flow so their tops align on desktop; mobile flex ordering still places card after explanatory text. Build, whitespace checks and Chromium at 320/390/1440px passed. Desktop screenshot reviewed: card and headline begin at y=88px. No deployment.
 
 - Latest owner refinement: prevent the lead from spanning above the contact card. Replaced the lower two-column grid with a right float beginning at the lead. Card remains in body, below headline. Build, whitespace checks and Chromium at 320/390/1440px passed; desktop screenshot reviewed. No production changes.
@@ -24,7 +27,7 @@ Refine the contact invitation without production deployment. Owner requested a t
 - Contact now floats right beginning beside the headline in the body. Lead and explanation wrap beside it and may reclaim width below it. Below 951px, text precedes contact in the stacked layout.
 - Copy: “Curious? Want to find out more? Want to contribute?” then “Get in touch with Costin!” on a separate line.
 - Static build passed. Chromium at 320, 390 and 1440px: no overflow, email SVG loaded, correct profile URLs, old post link absent, no page errors. Desktop screenshot reviewed.
-- Found owner-supplied mycodespace-site/maxresdefault.jpg and moved it to src/assets/costin-cozianu-chess.jpg. Full chess scene preserved above invitation; no identity-based crop. Astro generates 320/640px WebP variants (14/42kB versus 172kB source).
+- Found owner-supplied mycodespace-site/maxresdefault.jpg and moved it to src/assets/costin-cozianu-chess.jpg. Original retained in source assets for editing; latest portrait crop supersedes the initial full-scene display.
 - Rebuilt successfully and verified both photo and email load at 320, 390 and 1440px, with no overflow or page errors. Desktop screenshot reviewed. No dependencies added.
 - No production deployment or cloud changes. Local dev server remains on port 4329 for review.
 - main and origin/main still match; no workflow changes, no synchronization needed. No open owned bugs or mail.
