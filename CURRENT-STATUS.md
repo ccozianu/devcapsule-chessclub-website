@@ -11,3 +11,4 @@ registered workstream status file.
 |---|---|---|---|---|---|
 | `project-management` | 2026-09-27 | Maintain project-wide priorities, sequencing, dependencies, and lifecycle coordination | active; permanent coordination | `ws-project-management/coordination` | [workstream status](engineering-docs/wip/2026-09-27-project-management/CURRENT-STATUS.md) |
 | `maintenance` | 2026-09-27 | Own the defects no open workstream covers, on `main` and on maintained release lines, and drive maintenance releases | active; permanent maintenance | `ws-maintenance/`; no branch yet | [workstream status](engineering-docs/wip/2026-09-27-maintenance/CURRENT-STATUS.md) |
+| `mycodespace-genie` | 2026-11-01 | Desktop-only line-art genie cameo over the MyCodeSpace landing page; local preview, no production deployment | active | `ws-mycodespace-genie/overlay` | [workstream status](engineering-docs/wip/2026-11-01-mycodespace-genie/CURRENT-STATUS.md) |

@@ -110,3 +110,7 @@
 - [MyCodeSpace copy update](engineering-docs/archive/2026-11-01-mycodespace-copy/CURRENT-STATUS.md)
 
 - [MyCodeSpace contact update](engineering-docs/archive/2026-11-01-mycodespace-contact/CURRENT-STATUS.md)
+
+- [MyCodeSpace desktop genie overlay work order](engineering-docs/work-orders/2026-11-01-mycodespace-genie-overlay.md)
+
+- [MyCodeSpace genie overlay](engineering-docs/wip/2026-11-01-mycodespace-genie/CURRENT-STATUS.md)
