@@ -2,7 +2,7 @@
 
 Name: `mycodespace-contact`
 Start date: 2026-11-01
-State: paused; prepared for owner review
+State: blocked; portrait file not visible
 Branch association: `ws-mycodespace-contact/update`
 Target: main; delivery: direct-main repository default, production deployment prohibited for this slice.
 
@@ -10,28 +10,26 @@ Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@f38ceada0768
 
 ## Goal and Current Task
 
-Remove the LinkedIn post link and add a visible “Get in touch with Costin” section subordinate to the opening paragraph, with an outlined SVG email and GitHub/LinkedIn profiles. Done means a successful static build and responsive browser review, with no deployment.
+Refine the contact invitation without production deployment. Owner requested a two-column desktop layout, introductory questions, and a supplied JPG portrait moved to a descriptive site asset path.
 
-## Context and Next Step
+## Current State and Evidence
 
-Owner prioritized MyCodeSpace; the chess-site next step remains recorded in project-management and is deferred during this work.
-Starting main equals origin/main; workflow files unchanged. No synchronization needed. No open bugs owned by this new workstream. Mail/intake empty.
-Workflow gap: registration instructions describe both creating records on main and committing on the first branch; create and commit registration on the new branch from clean main, as step 6 directs.
-Next: owner reviews http://localhost:4329/ and supplies the second change. Do not deploy until explicitly authorized.
+- Contact now sits beside the longer explanation on desktops; headline and lead remain full width. Below 951px, explanation precedes contact.
+- Copy: “Curious? Want to find out more? Want to contribute?” then “Get in touch with Costin!” on a separate line.
+- Static build passed. Chromium at 320, 390 and 1440px: no overflow, email SVG loaded, correct profile URLs, old post link absent, no page errors. Desktop screenshot reviewed.
+- Photo is not visible in repository root or nearby workspace paths yet. Asked owner for filename/path or confirmation once copied. Do not substitute a different photo. Once available, inspect it, move to mycodespace-site/src/assets/costin-cozianu.jpg and use Astro image optimization for the contact portrait.
+- No production deployment or cloud changes. Local dev server remains on port 4329 for review.
+- main and origin/main still match; no workflow changes, no synchronization needed. No open owned bugs or mail.
+- Chess-site next step remains recorded in project-management and deferred by owner priority.
 
-## Checkpoint Evidence
+## Next Step
 
-- Removed the LinkedIn post link; contact panel follows the lead paragraph. Heading is 20px versus 21px lead on desktop, 17px versus 18px on mobile.
-- Email SVG contains glyph paths, no text node or mailto. Spoken-form alt preserves accessibility.
-- GitHub verified as github.com/ccozianu. LinkedIn profile slug costin-cozianu-0a36a95 identified from indexed LinkedIn posts; direct profile fetch returns LinkedIn's 999 restriction, so owner can confirm destination during review.
-- Static build and git diff --check passed. Chromium at 320, 390, 1440px: no overflow, loaded SVG, correct profile URLs, old post link absent, no page errors. Desktop/mobile screenshots visually reviewed.
-- No deployment, cloud upload, DNS or production changes. Local dev server remains on port 4329 for review.
-- Source, requirements and site guide updated; committed on this workstream branch. No runtime dependencies added.
-
+Await the missing JPG, then add and verify portrait at desktop/mobile sizes. No production deployment without explicit authorization.
 
 ## Open Threads
 
-- Awaiting the human: second change has not yet been specified; no production deployment authorized.
+- Awaiting the human: supplied JPG is absent from this checkout; filename/path requested.
+- Original broader second change remains unspecified. Current turn refines the first contact change.
 
 ## Document Index
 
