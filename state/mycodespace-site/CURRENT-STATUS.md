@@ -2,7 +2,7 @@
 
 Name: `mycodespace-site`
 Start date: 2026-11-01
-State: active
+State: integrating
 Branch association: `ws-mycodespace-site/implementation`
 Target: `main`; delivery: direct-main under WORKFLOW-LOCAL.md.
 Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@f38ceada0768
@@ -31,3 +31,20 @@ Read the supplied post, implement and validate the site, then integrate for loca
 
 - `intake-dispositions.md`: received-item decisions; read if tracing intake.
 - `intake/`: incoming work; read at session start.
+
+## Validation Checkpoint
+
+- Static Astro build passed (home and custom 404).
+- Chromium checks passed at 320, 390, 768, 1440 px: no horizontal overflow,
+  zero axe accessibility violations on the home page, no page errors.
+- Keyboard skip link, product destination and HTTP 404 checked.
+- Visually inspected mobile screenshot; desktop screenshot captured.
+- Deployment shell syntax, explicit-target rejection and plan output passed.
+- Shared cloud scripts remain unchanged; no live provisioning or deployment.
+- Dependency installation succeeded. Astro matches the existing candidate version.
+
+## Next Step
+
+Finish and fast-forward to main under the prototype policy; preserve the owner's
+local DevCapsule files. Next product step is owner review, then choosing cloud
+targets and authorizing apex deployment if desired.
