@@ -14,6 +14,8 @@ Refine the contact invitation without production deployment. Owner requested a t
 
 ## Current State and Evidence
 
+- Latest positioning refinement: left-aligned portrait within card instead of centering it; asymmetric CSS egg outline. Underlying sharp crop still excludes partner. Build, diff whitespace and Chromium at 320/390/1440px passed; desktop screenshot reviewed. No deployment.
+
 - Latest owner portrait refinement: owner identified himself as player on left. Astro now generates left-aligned 2:3 crops at 160/320px; CSS oval frames a 160×240px portrait. No blur or generative changes. Partner on right excluded from generated public files; full original stays in source assets only. Built dist contains only cropped WebPs (7/19kB), not original or previous full-scene versions.
 - Build, whitespace and Chromium responsive checks passed at 320/390/1440px. Desktop screenshot confirms sharp owner portrait with partner absent. No deployment.
 
