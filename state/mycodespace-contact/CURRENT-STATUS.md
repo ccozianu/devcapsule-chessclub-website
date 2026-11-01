@@ -14,6 +14,9 @@ Refine the contact invitation without production deployment. Owner requested a t
 
 ## Current State and Evidence
 
+- Owner requested tighter desktop top spacing: header padding reduced to 8px per side vertically (56px band including wordmark); removed intro announcement and its unused CSS. Headline now starts at y=88px instead of y≈235px at desktop widths. Removed extra-large-screen top padding override.
+- Final build and diff whitespace checks passed. Chromium checks at 320/390/1440px still pass; 1600px confirms 56px header, headline at 88px, announcement absent, no horizontal overflow. Desktop screenshot reviewed. No deployment.
+
 - Contact now sits beside the longer explanation on desktops; headline and lead remain full width. Below 951px, explanation precedes contact.
 - Copy: “Curious? Want to find out more? Want to contribute?” then “Get in touch with Costin!” on a separate line.
 - Static build passed. Chromium at 320, 390 and 1440px: no overflow, email SVG loaded, correct profile URLs, old post link absent, no page errors. Desktop screenshot reviewed.
