@@ -32,3 +32,16 @@ No open bugs belong to this newly registered workstream; intake is empty.
 ## Documents
 
 - intake-dispositions.md: incoming-work decisions, currently empty.
+
+## Deployment Checkpoint
+
+Dedicated bucket created and public object-viewer binding granted without any
+organization-policy changes. Static build and upload passed. Backend
+`mycodespace-ai-site-backend` created; Google-managed two-domain certificate
+`mycodespace-ai-apex-www-cert` is provisioning. Shared IP: 34.120.230.82.
+Provision helper appends certificates/host rules and preserves unrelated DNS.
+
+Provision helper initially calculated the upload working directory incorrectly;
+corrected it to the repository root and reran successfully through upload.
+The bucket operations were safe to repeat. Continue public HTTPS verification
+once routing and DNS have propagated.
