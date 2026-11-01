@@ -14,12 +14,14 @@ Refine the contact invitation without production deployment. Owner requested a t
 
 ## Current State and Evidence
 
+- Latest alignment refinement: moved card before headline in document flow so their tops align on desktop; mobile flex ordering still places card after explanatory text. Build, whitespace checks and Chromium at 320/390/1440px passed. Desktop screenshot reviewed: card and headline begin at y=88px. No deployment.
+
 - Latest owner refinement: prevent the lead from spanning above the contact card. Replaced the lower two-column grid with a right float beginning at the lead. Card remains in body, below headline. Build, whitespace checks and Chromium at 320/390/1440px passed; desktop screenshot reviewed. No production changes.
 
 - Owner requested tighter desktop top spacing: header padding reduced to 8px per side vertically (56px band including wordmark); removed intro announcement and its unused CSS. Headline now starts at y=88px instead of y≈235px at desktop widths. Removed extra-large-screen top padding override.
 - Final build and diff whitespace checks passed. Chromium checks at 320/390/1440px still pass; 1600px confirms 56px header, headline at 88px, announcement absent, no horizontal overflow. Desktop screenshot reviewed. No deployment.
 
-- Contact now floats right beginning beside the lead paragraph in the body; headline stays full width. Lead and explanation wrap beside it and may reclaim width below it. Below 951px, text precedes contact in the stacked layout.
+- Contact now floats right beginning beside the headline in the body. Lead and explanation wrap beside it and may reclaim width below it. Below 951px, text precedes contact in the stacked layout.
 - Copy: “Curious? Want to find out more? Want to contribute?” then “Get in touch with Costin!” on a separate line.
 - Static build passed. Chromium at 320, 390 and 1440px: no overflow, email SVG loaded, correct profile URLs, old post link absent, no page errors. Desktop screenshot reviewed.
 - Found owner-supplied mycodespace-site/maxresdefault.jpg and moved it to src/assets/costin-cozianu-chess.jpg. Full chess scene preserved above invitation; no identity-based crop. Astro generates 320/640px WebP variants (14/42kB versus 172kB source).
