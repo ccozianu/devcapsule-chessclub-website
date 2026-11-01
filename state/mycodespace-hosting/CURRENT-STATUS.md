@@ -45,3 +45,11 @@ Provision helper initially calculated the upload working directory incorrectly;
 corrected it to the repository root and reran successfully through upload.
 The bucket operations were safe to repeat. Continue public HTTPS verification
 once routing and DNS have propagated.
+
+## DNS and TLS Checkpoint (09:14 UTC)
+
+Apex A resolves via 8.8.8.8 to 34.120.230.82. www CNAME resolves to
+mycodespace.ai. Both hosts share the dedicated matcher/backend. Original
+chessclub-site default backend and certificate are unchanged. New certificate
+is still PROVISIONING; public edge still presents the old certificate/route.
+Continue polling; do not report HTTPS complete until ordinary curl validates it.
