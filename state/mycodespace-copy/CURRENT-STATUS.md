@@ -27,3 +27,13 @@ Next: edit copy and metadata, deploy update, verify both hosts, integrate.
 ## Documents
 
 - intake-dispositions.md: received-item decisions.
+
+## Verification
+
+Static build and GCS update passed. CDN invalidations completed only for apex
+and www. Both HTTPS responses match built HTML byte-for-byte, including new
+headline, google3 paragraph and metadata; old headline absent. Chromium on both
+hosts at 390/1440 px passed layout, accessibility (zero axe violations), primary
+link and page-error checks. Source background verified against Google's paper:
+https://research.google/pubs/why-google-stores-billions-of-lines-of-code-in-a-single-repository/.
+No hosting infrastructure or DNS changes. Next: finish and integrate.
