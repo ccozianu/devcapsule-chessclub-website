@@ -6,7 +6,7 @@ Start date: `2026-09-27`
 
 State: active; permanent coordination
 
-Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@f38ceada0768
+Definition read: WORKFLOW.md@02914b52c231, WORKFLOW-LOCAL.md@23bcc833e641
 
 Branch association: `ws-project-management/coordination`
 
@@ -28,7 +28,35 @@ The reserved workstream was initialized. Transitioned from single-stream mode on
 
 The next coding agent should pick up the [smartgalati-test5 work order](../../work-orders/2026-09-27-smartgalati-test5-prototype.md), register a fresh delivery workstream and implement the independent candidate.
 
-## Latest Delivered Slice (2026-09-27, evening)
+## Latest Delivered Slice (2026-11-19): workflow definition refresh to 0.3.1
+
+- At the owner's explicit request, refreshed the reusable definition from
+  0.2.14 to DevCapsule 0.3.1 with `devcapsule bootstrap project
+  --refresh-workflow-definition` (tool: v0.3.1-local-linux-x86_64). It
+  replaced `AGENTS.md` and `WORKFLOW.md`, set `[workflow] version = "0.3.1"`,
+  added `.idea/` to `.gitignore`, and installed `PREAMBLE.md` and
+  `INFORMATION-MODEL.md` (for humans). Project-owned files were preserved.
+- Migration steps from *Changes* (0.3.0, 0.3.1):
+  - *Validation commands are required*: filled that section of
+    `WORKFLOW-LOCAL.md` from the sites' `package.json`, READMEs and CI
+    workflows. Ran the Rocada gate as written: 10/10 unit tests, contrast
+    check passes for all palettes, build 291 pages with no errors. The other
+    sites' commands were transcribed, not rerun.
+  - *Integration is a merge commit*: updated the wording of the prototype
+    direct-main exception in `WORKFLOW-LOCAL.md` from fast-forward to
+    `git merge --no-ff`, matching the new direct-main procedure. Agent's
+    interpretation: the exception authorizes direct-main delivery, and
+    "fast-forward" only restated the old procedure. Owner may reverse it by
+    recording a fast-forward exception.
+  - *Information model*: no bug record needs reclassifying; 0 open bugs.
+  - *Pile of ideas*: no migration; directory is created with the first idea.
+- Added the two new files to `index.md`.
+- Delivery: pull request from `ws-project-management/workflow-refresh`, at the
+  owner's request for this change (direct-main remains the local default).
+  The capsule has no `gh` and no token, so the branch is pushed and the owner
+  opens and merges the pull request, as a merge commit.
+
+## Earlier Slice (2026-09-27, evening)
 
 - Prepared the test5 work order at the owner's request (hostname confirmed as
   `smartgalati-test5.mycodespace.ai`), carrying forward the test4 conditions plus
@@ -61,4 +89,11 @@ The next coding agent should pick up the [smartgalati-test5 work order](../../wo
 
 ## Open Threads
 
-- None recorded yet.
+- Owner step: set the GitHub repository's pull-request merge method to merge
+  commits (definition 0.3.0 migration); the agent has no repository-settings
+  access.
+- `.devcapsule/devcapsule.linux-amd64.lock` carries an uncommitted
+  re-resolution (matrix embedded-33, Claude Code 2.1.321, Codex 0.167.0) made
+  outside this slice; left uncommitted for the owner to decide.
+- The planned next step predates `smartgalati-test5-site/`, which now exists
+  on `main`; confirm or replace it at the next coordination session.
