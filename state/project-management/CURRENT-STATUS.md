@@ -53,8 +53,11 @@ The next coding agent should pick up the [smartgalati-test5 work order](../../wo
 - Added the two new files to `index.md`.
 - Delivery: pull request from `ws-project-management/workflow-refresh`, at the
   owner's request for this change (direct-main remains the local default).
-  The capsule has no `gh` and no token, so the branch is pushed and the owner
-  opens and merges the pull request, as a merge commit.
+  Opened as pull request #1
+  (https://github.com/ccozianu/devcapsule-chessclub-website/pull/1); the
+  owner merges it, as a merge commit. `gh` is not on the default `PATH` in
+  this capsule; the owner's tip is `source
+  /opt/xtras/miniconda3/etc/profile.d/conda.sh && conda activate gh`.
 
 ## Earlier Slice (2026-09-27, evening)
 
