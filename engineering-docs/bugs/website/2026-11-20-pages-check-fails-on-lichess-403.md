@@ -1,5 +1,5 @@
 ---
-status: fixed
+status: closed
 severity: blocking
 target: none
 owner: maintenance
@@ -58,3 +58,10 @@ settings while lichess.org answers 403 (done 2026-11-20: all browser and
 palette checks pass); then a green run of the Pages workflow.
 
 Reopen if: the check fails again on a console error caused by lichess.org.
+
+## Closure (2026-11-20)
+
+Pages run 44649277815 in `Luciangl/devcapsule-chessclub-website` (commit
+`f2df0ea`, the merge of this repository's `main` onto Lucian's) passed the
+browser checks and deployed; https://webtest.smartgalati.ro/ answers 200.
+The Pages and test4 workflows in this repository passed on the same fix.

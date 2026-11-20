@@ -41,7 +41,8 @@ Bugs resolved, verified, and integrated into `main`:
      contrast passes, build 291 pages, `pages:check` with
      `PAGES_SITE_URL=http://webtest.smartgalati.ro PAGES_BASE_PATH=` passes
      (browser and palette suites).
-   - Status `fixed`; close after a green Pages run in Lucian's repository.
+   - Closed: Pages run 44649277815 in Lucian's repository deployed green
+     after this repository's `main` was merged onto his (`f2df0ea`).
 - The club's repository is now `Luciangl/devcapsule-chessclub-website` (a
   fork of this one), published at https://webtest.smartgalati.ro/. Its `main`
   carries three coach-profile deletions this repository does not have.
