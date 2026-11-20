@@ -6,7 +6,7 @@ Start date: `2026-09-27`
 
 State: active; permanent maintenance
 
-Definition read: WORKFLOW.md@eabe23ed644a, WORKFLOW-LOCAL.md@05687aa6136c
+Definition read: WORKFLOW.md@02914b52c231, WORKFLOW-LOCAL.md@23bcc833e641
 
 Branch association: `ws-maintenance/`; no branch yet
 
@@ -31,7 +31,20 @@ Bugs resolved, verified, and integrated into `main`:
    - Eliminated cursor transit gap with invisible hover bridge.
    - Added click-to-pin persistent open mode with outside click and Escape key dismissal.
    - Verified cleanly with `npm run build` (19 pages, 0 errors, 0 warnings).
-- Currently 0 open bugs in queue.
+3. `engineering-docs/bugs/website/2026-11-20-pages-check-fails-on-lichess-403.md` (2026-11-20):
+   - The Pages workflow in `Luciangl/devcapsule-chessclub-website` failed
+     because lichess.org answers the embedded board with a Cloudflare
+     challenge (403), which `claude-rocada-site/tests/browser.mjs` counted as
+     the site's own console error.
+   - Fix: the browser suite forgives console errors caused by refused
+     lichess.org responses. Gate in `claude-rocada-site/`: 10/10 unit tests,
+     contrast passes, build 291 pages, `pages:check` with
+     `PAGES_SITE_URL=http://webtest.smartgalati.ro PAGES_BASE_PATH=` passes
+     (browser and palette suites).
+   - Status `fixed`; close after a green Pages run in Lucian's repository.
+- The club's repository is now `Luciangl/devcapsule-chessclub-website` (a
+  fork of this one), published at https://webtest.smartgalati.ro/. Its `main`
+  carries three coach-profile deletions this repository does not have.
 
 ## Planned Next Step
 
